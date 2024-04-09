@@ -1,0 +1,86 @@
+html{
+    align-items: center;
+    background-color: rgb(2, 2, 223);
+    background-image: url(Images/Techy-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+}
+
+.calculator-container{
+    border: 3px solid white;
+    height:589.781px;
+}
+
+.calculator-title{
+    font-family: "Share Tech", sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    margin-right: 25px;
+}
+
+.calculator{
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 21px;
+    height: 400px;
+    margin-left: 475px;
+    padding: 10px;
+    width: 250px;
+}
+
+input[type="text"]{
+    height: 26px;
+    margin-top: 10px;
+    width: 205px;
+}
+
+button{
+    background-color: rgb(3, 3, 173);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 3px 4px black;
+    color: white;
+    cursor: pointer;
+    font-family: "Share Tech", sans-serif;
+    font-size: 22px;
+    outline: none;
+    padding: 5px;
+    width: 100%;
+}
+
+.calculator-buttons{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.operating-buttons{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(6, 30px);
+    padding: 5px;
+    
+}
+
+.operating-buttons{
+    display: grid;
+    grid-template-columns: repeat(5, 2fr);
+    margin-top: 25px;
+}
+
+.btn i{
+    color: white;
+    font-size: 18px;
+}
+
+.root i{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.sqrt i{
+    font-size: 15px;
+}
