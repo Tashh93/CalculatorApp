@@ -22,15 +22,20 @@ html{
 
 .calculator{
     align-items: center;
-    border: 2px solid black;
+    background: linear-gradient(35deg, white, rgb(149, 149, 255), grey);
+    border: none;
     border-radius: 21px;
+    box-shadow: 12px 10px 12px black;
     height: 400px;
     margin-left: 475px;
+    outline: none;
     padding: 10px;
     width: 250px;
 }
 
 input[type="text"]{
+    border-radius: 9px;
+    box-shadow: 3px solid black;
     height: 26px;
     margin-top: 10px;
     width: 205px;
@@ -71,7 +76,7 @@ button{
     margin-top: 25px;
 }
 
-.btn i{
+.sqrd i{
     color: white;
     font-size: 18px;
 }
@@ -83,4 +88,10 @@ button{
 
 .sqrt i{
     font-size: 15px;
+}
+
+.turn-off{
+    background-color: black;
+    color: white;
+    text-align: right;
 }
