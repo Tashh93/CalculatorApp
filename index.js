@@ -7,18 +7,26 @@ let currentValue = 0;
 document.addEventListener('DOMContentLoaded', function(){
     const powerButton = document.getElementById("power");
     const display = document.getElementById('display');
+    let powerOnOff = 0;
 
     powerButton.addEventListener("click", function(){
         display.classList.toggle('turn-off');
-        if(display.classList.contains("turn-off")){
-            display.value = "Powering on";
+        if(powerOnOff === 0){
+            display.value = 0;
+            console.log("clicked once");
             powerOnOff = 1;
-        } else{
+        }else{
             display.value = "Powering Off..."
             powerOnOff = 0;
+            console.log("Clicked Twice");
         } 
         clearDisplay();
     })
+
+//I'm trying to figure out how to take the word power off the input area without affecting the overall button.
+//I don't know how to enter the input field using Javascript.
+
+
 
 //when a button is clicked the value shows
 const buttons = document.querySelectorAll('button');
@@ -66,6 +74,7 @@ const sqRoot = document.getElementById('sqrt');
 
 add.addEventListener("click", function(){
     setOperator("+");
+    
 });
 
 subtract.addEventListener("click",function(){
