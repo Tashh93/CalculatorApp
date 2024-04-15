@@ -12,11 +12,12 @@ document.addEventListener('DOMContentLoaded', function(){
     powerButton.addEventListener("click", function(){
         display.classList.toggle('turn-off');
         if(powerOnOff === 0){
-            display.value = 0;
+            display.disabled = true;
             console.log("clicked once");
             powerOnOff = 1;
         }else{
-            display.value = "Powering Off..."
+            display.disabled = false;
+            display.value = 0;
             powerOnOff = 0;
             console.log("Clicked Twice");
         } 
@@ -74,6 +75,7 @@ const sqRoot = document.getElementById('sqrt');
 
 add.addEventListener("click", function(){
     setOperator("+");
+
     
 });
 
@@ -88,6 +90,14 @@ multiply.addEventListener("click",function(){
 divide.addEventListener("click",function(){
     setOperator("/");
 });
+
+numSquared.addEventListener("click", function(){
+    setOperator("^");
+})
+
+sqRoot.addEventListener("click", function(){
+    setOperator("sqrt");
+})
 
 let clickCount = 0;
 
