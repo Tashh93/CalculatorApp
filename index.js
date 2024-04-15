@@ -13,21 +13,16 @@ document.addEventListener('DOMContentLoaded', function(){
         display.classList.toggle('turn-off');
         if(powerOnOff === 0){
             display.disabled = true;
-            console.log("clicked once");
+            console.log("clicked Once");
             powerOnOff = 1;
         }else{
             display.disabled = false;
-            display.value = 0;
+            display.textContent = "Powering On";
             powerOnOff = 0;
             console.log("Clicked Twice");
         } 
         clearDisplay();
     })
-
-//I'm trying to figure out how to take the word power off the input area without affecting the overall button.
-//I don't know how to enter the input field using Javascript.
-
-
 
 //when a button is clicked the value shows
 const buttons = document.querySelectorAll('button');
@@ -75,8 +70,6 @@ const sqRoot = document.getElementById('sqrt');
 
 add.addEventListener("click", function(){
     setOperator("+");
-
-    
 });
 
 subtract.addEventListener("click",function(){
@@ -101,6 +94,8 @@ sqRoot.addEventListener("click", function(){
 
 let clickCount = 0;
 
+
+// Negative-positive button
 toggleSignButton.addEventListener("click",function(){
     clickCount++;
 
@@ -108,10 +103,12 @@ toggleSignButton.addEventListener("click",function(){
 
     if(clickCount === 1){
         currentValue *= -1;
+        console.log("Clicked Once");
         display.value = currentValue;
         
     } else if(clickCount == 2){
         currentValue *=1;
+        console.log("Clicked Twice");
         clickCount = 0;
     }
 
@@ -151,6 +148,9 @@ function calculateResult(){
             break;
         case "sqrt":
             result = Math.sqrt(newValue);
+            break;
+        case "-/+":
+            result = -currentValue;
             break;
         default:
             result = newValue; 
