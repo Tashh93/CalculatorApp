@@ -143,13 +143,12 @@ button{
     }
 
     .calculator-title{
-        font-size: 20px;
-        margin-right: -8px;
+        font-size: 25px;
         margin-top: 92px;
     }
 
     .calculator{
-        margin-left: 65px;
+        margin-left: 63px;
         margin-top: 46px;
     }
 
@@ -163,18 +162,29 @@ button{
 
 @media screen and (max-width:440px){
     .calculator-title{
-        font-size: 30px;
+        font-size: 26px;
         margin-left: 25px;
     }
     
     .calculator{
-        margin-left: 222px;
+        margin-left: 80px;
+    }
+
+    .footer{
+        margin-left: 10px;
+        margin-top: 84px;
     }
 }
 
 @media screen and (max-width:768px){
+    .calculator-container{
+        border: 3px solid white;
+        height: 1000px;
+        
+    }
+    
     .calculator{
-        margin-left: 222px;
+        margin-left: 234px;
     }
 }
 
