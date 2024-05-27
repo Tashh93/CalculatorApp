@@ -51,15 +51,6 @@ input[type="text"]{
 button{
     background-color: rgb(3, 3, 173);
     border: none;
-    border-radius: 10px;
-    box-shadow: 3px 4px black;
-    color: white;
-    cursor: pointer;
-    font-family: "Share Tech", sans-serif;
-    font-size: 22px;
-    outline: none;
-    padding: 5px;
-    width: 100%;
 }
 
 .calculator-buttons{

@@ -106,4 +106,3 @@ document.addEventListener('DOMContentLoaded', function(){
         operator = null; 
     }
 });
-1
