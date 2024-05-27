@@ -9,13 +9,14 @@ html{
 }
 
 .calculator-container{
-    border: 3px solid white;
-    height:589.781px;
+    border: 3px white;
+    border-style: groove;
+    height: 743.781px;
 }
 
 .calculator-title{
     font-family: "Share Tech", sans-serif;
-    font-size: 26px;
+    font-size: 50px;
     font-weight: 600;
     margin-right: 25px;
 }
@@ -27,21 +28,21 @@ html{
     border-radius: 21px;
     box-shadow: 12px 10px 12px black;
     height: 400px;
-    margin-left: 475px;
+    margin-left: 627px;
     outline: none;
     padding: 10px;
     width: 250px;
 }
 
-input{
+/* input{
     
-}
+} */
 
 input[type="text"]{
     border-radius: 9px;
     box-shadow: 3px solid black;
     height: 26px;
-    margin-left: 20px;
+    margin-left: 3px;
     margin-top: 23px;
     text-align: right;
     width: 205px;
@@ -102,6 +103,79 @@ button{
     text-align: right;
 }
 
-#neg-pos{
+/* #neg-pos{
     
+} */
+.footer{
+    font-weight: 500;
+    font-size: 20px;
+    margin-left: -35px;
+
 }
+@media screen and (max-width:375px){
+    .calculator-container{
+        border: 3px solid white;
+        height: 649px;
+        
+    }
+
+    .calculator-title {
+        font-size: 20px;
+        margin-right: -8px;
+    }
+
+    .calculator{
+        margin-left: 45px;
+        margin-top: 41px;
+    }
+
+    .footer{
+        margin-left: 4px;
+        margin-top: 80px;
+    }
+}
+
+
+@media screen and (max-width:414px){
+    .calculator-container{
+        border: 3px solid white;
+        height: 873px;
+    }
+
+    .calculator-title{
+        font-size: 20px;
+        margin-right: -8px;
+        margin-top: 92px;
+    }
+
+    .calculator{
+        margin-left: 65px;
+        margin-top: 46px;
+    }
+
+    .footer{
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 125px;
+    }
+}
+
+
+@media screen and (max-width:440px){
+    .calculator-title{
+        font-size: 30px;
+        margin-left: 25px;
+    }
+    
+    .calculator{
+        margin-left: 222px;
+    }
+}
+
+@media screen and (max-width:768px){
+    .calculator{
+        margin-left: 222px;
+    }
+}
+
+
