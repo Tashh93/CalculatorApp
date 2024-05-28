@@ -64,9 +64,12 @@ document.addEventListener('DOMContentLoaded', function(){
     };
 
     for (const [key, value] of Object.entries(operators)) {
-        document.getElementById(key).addEventListener("click", function(){
-            setOperator(value);
-        });
+        const element = document.getElementById(key);
+        if(element) {
+            element.addEventListener("click", function(){
+                setOperator(value);
+            });
+        }
     }
 
     const toggleSignButton = document.getElementById('neg-pos');
@@ -82,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function(){
         switch(operator){
             case "+":
                 result = currentValue + newValue;
-                break;
+                break; 
             case "-":
                 result = currentValue - newValue;
                 break;
