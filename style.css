@@ -71,8 +71,9 @@ h1{
 }
 
 .calculator{
-    background-color: black;
-    border: 4px solid black;
+    box-shadow: 2px 4px 5px rgb(212, 20, 116);
+    background-color: rgb(187, 106, 187);
+    border: none;
     border-radius: 7px;
     height: 520px;
     padding: 5px;
@@ -80,7 +81,7 @@ h1{
 }
 
 input{
-    border: 3px solid black;
+    border: none;
     border-radius: 5px;
     margin: 10px 0 15px;
     padding: 25px;
@@ -93,13 +94,23 @@ input{
 } */
 
 button{
+    box-shadow: 2px 2px rgb(212, 20, 116);
     border: none;
-    border-radius: 7px;
+    border-radius: 50px;
+    color: rgb(253, 253, 253);
+    background-color: pink;
     cursor: pointer;
     height: 75px;
     width: 100px;
-    font-size: 16px;
+    font-family: "Varela Round", serif;
+    font-size: 25px;
+    font-weight: 400;
     padding: 18px;
+}
+
+button:hover{
+    color: pink;
+    background-color: rgb(253, 253, 253)
 }
 
 .operating-buttons{
@@ -117,10 +128,80 @@ button{
     background-color: blue;
 }
 
-#add, #multiply, #subtraction, #divide, .percentage, .equal-btn, #clearbtn{
+.power-btn:hover {
+    color: blue;
+    background-color: white;
+}
+
+#add{
+    color: white;
+    background-color: rgb(255, 117, 140);
+}
+
+#add:hover{
+        color:rgb(255, 117, 140);
+        background-color: white;
+}
+
+#multiply{
+    color: white;
+    background-color: rgb(234, 0, 255);
+}
+
+#multiply:hover{
+    color: rgb(234, 0, 255);
+    background-color: white;
+}
+#subtraction{
+    color: white;
+    background-color: rgb(0, 255, 255);
+}
+
+#subtraction:hover{
+    color: rgb(0, 255, 255);
+    background-color: white;
+}
+
+#divide{
+    color: white;
+    background-color: rgb(0, 255, 200);
+}
+
+#divide:hover{
+    color: rgb(0, 255, 200);
+    background-color: white;
+}
+
+.percentage{
+    color: white;
+    background-color: rgb(255, 217, 0);
+}
+
+.percentage:hover{
+    color: rgb(255, 217, 0);
+    background-color: white;
+}
+
+.equal-btn{
+    color: white;
+    background-color: rgb(255, 138, 220);
+}
+
+.equal-btn:hover{
+    color: rgb(255, 138, 220);
+    background-color: white;
+}
+
+#clearbtn{
     color: white;
     background-color: orange;
 }
+
+#clearbtn:hover{
+    color: orange;
+    background-color: white;
+}
+
 .turn-off{
     background-color: black;
     color: white;
