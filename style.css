@@ -44,7 +44,7 @@ table {
 
 
 html{
-    background-color: rgb(80, 73, 73);
+    background-color: rgb(230, 255, 138);
     color: white;
     font-family: "Varela Round", serif;
     font-weight: 400;
@@ -63,6 +63,8 @@ body {
 }
 
 h1{
+    color: rgb(187, 106, 187);
+    text-shadow: 2px 2px 4px rgb(28, 223, 28);
     font-size: 48px;
     font-weight: 650;
     letter-spacing: 1px;
@@ -71,7 +73,7 @@ h1{
 }
 
 .calculator{
-    box-shadow: 2px 4px 5px rgb(212, 20, 116);
+    box-shadow: 4px 4px 5px rgb(28, 223, 28);
     background-color: rgb(187, 106, 187);
     border: none;
     border-radius: 7px;
@@ -210,6 +212,8 @@ button:hover{
 
 
 .footer{
+    color: rgb(187, 106, 187);
+    text-shadow: 2px 2px 4px rgb(28, 223, 28);
     font-weight: 500;
     font-size: 20px;
     margin-left: -35px;
