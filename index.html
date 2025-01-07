@@ -9,7 +9,7 @@
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300..900&family=Share+Tech&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 
     <!--Font Awesome Kit-->
     <script src="https://kit.fontawesome.com/fe91362e30.js" crossorigin="anonymous"></script>
@@ -22,30 +22,26 @@
         <div class="calculator">
             <input type="text" id="display" readonly>
             <div class="operating-buttons">
-                <button id="power"><i class="fas fa-power-off"></i></button>
-                <button id="subtraction" value="-">-</button>
-                <button id="add" value="+">+</button>
+                <button class="power-btn">Power</button>
+                <button id="clearbtn">C</button>
+                <button class="percentage" value = "%">%</button>
                 <button id="divide" value="/">/</button>
-                <button id="multiply" value="*">*</button>
-                <button id="clr" value="0">CLR</button>
-                <button class="sqrt" value="sqrt"><i class="fas fa-superscript"></i></button>
-                <button class="sqrd" value="^"><i class="fas fa-square-root-alt"></i></button>
-                <button id="neg-pos" value="-/+">+/-</button>
-                <button id="clr-btn" value="0">CE</button>
-            </div>
-            <div class="calculator-buttons">
-                <button value="7">7</button>
-                <button value="8">8</button>
                 <button value="9">9</button>
-                <button value="4">4</button>
-                <button value="5">5</button>
+                <button value="8">8</button>
+                <button value="7">7</button>
+                <button id="add" value="+">+</button>
                 <button value="6">6</button>
+                <button value="5">5</button>
+                <button value="4">4</button>
+                <button id="multiply" value="*">*</button>
                 <button value="1">1</button>
                 <button value="2">2</button>
                 <button value="3">3</button>
+                <button id="subtraction" value="-">-</button>
                 <button value="0">0</button>
                 <button value=".">.</button>
-                <button value="=">=</button>
+                <button value="0" class="clean-btn">CE</button>
+                <button value="=" class="equal-btn">=</button>
             </div>  
         </div>
         <p class="footer">&copy2024 Tasha Bradford, Software Engineer</p>

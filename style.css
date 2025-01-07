@@ -1,114 +1,140 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+} */
+/* HTML5 display-role reset for older browsers */
+ article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
 html{
-    align-items: center;
-    background-color: rgb(2, 2, 223);
-    background-image: url(Images/Techy-background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: rgb(80, 73, 73);
     color: white;
+    font-family: "Varela Round", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
     text-align: center;
 }
 
 .calculator-container{
-    border: 3px white;
-    border-style: groove;
-    height: 743.781px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.calculator-title{
-    font-family: "Share Tech", sans-serif;
-    font-size: 50px;
-    font-weight: 600;
-    margin-right: 25px;
+h1{
+    font-size: 48px;
+    font-weight: 650;
+    letter-spacing: 1px;
+    padding: 10px;
+    text-align: center;
 }
 
 .calculator{
-    align-items: center;
-    background: linear-gradient(35deg, white, rgb(149, 149, 255), grey);
-    border: none;
-    border-radius: 21px;
-    box-shadow: 12px 10px 12px black;
-    height: 400px;
-    margin-left: 627px;
-    outline: none;
-    padding: 10px;
-    width: 250px;
+    background-color: black;
+    border: 4px solid black;
+    border-radius: 7px;
+    height: 520px;
+    padding: 5px;
+    width: 490px;
 }
 
-/* input{
-    
+input{
+    border: 3px solid black;
+    border-radius: 5px;
+    margin: 10px 0 15px;
+    padding: 25px;
+    text-align: right;
+    width: 300px;
+}
+
+/* input[type="text"]{
+
 } */
 
-input[type="text"]{
-    border-radius: 9px;
-    box-shadow: 3px solid black;
-    height: 26px;
-    margin-left: 3px;
-    margin-top: 23px;
-    text-align: right;
-    width: 205px;
-}
- 
 button{
-    background-color: rgb(3, 3, 173);
     border: none;
-}
-
-.calculator-buttons{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-top: 35px;
-}
-
-.operating-buttons{
-    display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(6, 30px);
-    padding: 5px;
-    
+    border-radius: 7px;
+    cursor: pointer;
+    height: 75px;
+    width: 100px;
+    font-size: 16px;
+    padding: 18px;
 }
 
 .operating-buttons{
     display: grid;
-    grid-template-columns: repeat(5, 2fr);
-    margin-top: 25px;
+    grid-template-columns: repeat(4, 100px);
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-left: 5px;
+    width: 480px;
 }
 
-.sqrd i{
+.power-btn {
     color: white;
-    font-size: 18px;
+    background-color: blue;
 }
 
-.root i{
-    font-size: 15px;
-    font-weight: 400;
+#add, #multiply, #subtraction, #divide, .percentage, .equal-btn, #clearbtn{
+    color: white;
+    background-color: orange;
 }
-
-.sqrt i{
-    font-size: 15px;
-}
-
 .turn-off{
     background-color: black;
     color: white;
     text-align: right;
 }
 
-/* #neg-pos{
-    
-} */
+
 .footer{
     font-weight: 500;
     font-size: 20px;
     margin-left: -35px;
 
 }
-@media screen and (max-width:375px){
-    .calculator-container{
-        border: 3px solid white;
-        height: 649px;
-        
-    }
+@media screen and (max-width:375px){}
 
     .calculator-title {
         font-size: 20px;
@@ -124,7 +150,6 @@ button{
         margin-left: 4px;
         margin-top: 80px;
     }
-}
 
 
 @media screen and (max-width:414px){
