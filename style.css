@@ -59,7 +59,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 h1{
@@ -68,16 +67,18 @@ h1{
     font-size: 48px;
     font-weight: 650;
     letter-spacing: 1px;
-    padding: 10px;
+    margin-bottom: 17px;
+    padding: 20px;
     text-align: center;
 }
 
 .calculator{
-    box-shadow: 4px 4px 5px rgb(28, 223, 28);
+    /* margin-right: 85px; */
+    box-shadow: 2px 2px 3px 3px black;
     background-color: rgb(187, 106, 187);
     border: none;
     border-radius: 7px;
-    height: 520px;
+    height: 590px;
     padding: 5px;
     width: 490px;
 }
@@ -85,15 +86,17 @@ h1{
 input{
     border: none;
     border-radius: 5px;
+    box-shadow: 2px 3px 5px black;
     margin: 10px 0 15px;
-    padding: 25px;
+    padding: 20px;
     text-align: right;
     width: 300px;
 }
 
-/* input[type="text"]{
-
-} */
+input[type="text"]{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+}
 
 button{
     box-shadow: 2px 2px rgb(212, 20, 116);
@@ -123,11 +126,13 @@ button:hover{
     gap: 5px;
     margin-left: 5px;
     width: 480px;
+    height: 480px;
 }
 
 .power-btn {
     color: white;
     background-color: blue;
+    padding: 14px;
 }
 
 .power-btn:hover {
@@ -135,41 +140,41 @@ button:hover{
     background-color: white;
 }
 
-#add{
+#add-btn{
     color: white;
     background-color: rgb(255, 117, 140);
 }
 
-#add:hover{
+#add-btn:hover{
         color:rgb(255, 117, 140);
         background-color: white;
 }
 
-#multiply{
+#multiply-btn{
     color: white;
     background-color: rgb(234, 0, 255);
 }
 
-#multiply:hover{
+#multiply-btn:hover{
     color: rgb(234, 0, 255);
     background-color: white;
 }
-#subtraction{
+#subtraction-btn{
     color: white;
     background-color: rgb(0, 255, 255);
 }
 
-#subtraction:hover{
+#subtraction-btn:hover{
     color: rgb(0, 255, 255);
     background-color: white;
 }
 
-#divide{
+#divide-btn{
     color: white;
     background-color: rgb(0, 255, 200);
 }
 
-#divide:hover{
+#divide-btn:hover{
     color: rgb(0, 255, 200);
     background-color: white;
 }
@@ -194,12 +199,12 @@ button:hover{
     background-color: white;
 }
 
-#clearbtn{
+#clear-btn{
     color: white;
     background-color: orange;
 }
 
-#clearbtn:hover{
+#clear-btn:hover{
     color: orange;
     background-color: white;
 }
@@ -216,14 +221,13 @@ button:hover{
     text-shadow: 2px 2px 4px rgb(28, 223, 28);
     font-weight: 500;
     font-size: 20px;
-    margin-left: -35px;
-
+    margin: 15px;
 }
-@media screen and (max-width:375px){}
 
+@media screen and (max-width:375px){
     .calculator-title {
         font-size: 20px;
-        margin-right: -8px;
+        margin-right: 57px;
     }
 
     .calculator{
@@ -232,10 +236,10 @@ button:hover{
     }
 
     .footer{
-        margin-left: 4px;
-        margin-top: 80px;
+        margin-right: 25px;
+        margin-top: 5px;
     }
-
+}
 
 @media screen and (max-width:414px){
     .calculator-container{
