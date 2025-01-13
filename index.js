@@ -1,9 +1,9 @@
 //I want this app to be able to use the functions accordingly. 
 const inputDisplay = document.getElementById("display");
-
 inputDisplay.style.backgroundColor = "black";
 inputDisplay.value = "";
 inputDisplay.placeholder = "OFF";
+
 
 let isPoweredOn = false; //Track power status
 
@@ -93,7 +93,7 @@ subtractionButton.addEventListener("click", function(){
     if(isPoweredOn){
         inputDisplay.value += "-";
     }
-})
+});
 // Handle all number buttons
 const numberButtons = document.getElementsByClassName("num-btn");
 
@@ -108,5 +108,7 @@ Array.from(numberButtons).forEach(button => {
                 inputDisplay.value += buttonValue;
             }
         }
-    })
-})
+    });
+});
+
+// Math operation Logic
