@@ -53,6 +53,7 @@ clearEverything.addEventListener("click", function(){
         currentOperator = null;
         currentInput = "";
     }
+    console.log("Clear button clicked");
 });
 
 //Now I'm on to setting the functions for the operations.
@@ -69,35 +70,22 @@ percentButton.addEventListener("click", function(){
 
 const divideButton = document.getElementById("divide-btn");
 divideButton.addEventListener("click", function(){
-    if(isPoweredOn){
-        if(firstNumber === null){
-        firstNumber = parseFloat(inputDisplay.value);
-        currentOperator = '/'; // Stores the operator
-        inputDisplay.value = "";
-    } else {
-        secondNumber = parseFloat(inputDisplay.value);  // Stores the second number
-        if (secondNumber === 0){
-            inputDisplay.value = "Error: Division by zero";
-        } else {
-            result = firstNumber / secondNumber;
-            inputDisplay.value = result;
-            firstNumber = result;
-            secondNumber = null;
-            currentOperator = null;
-        }
-    }
-    } 
-});
+    handleOperator("/");
+    console.log("Divide button clicked");
+})
 
 // Function to handle operations
 function handleOperator (operator){
     if(isPoweredOn){
+        let result = 0;
+
         if(firstNumber === null){
             firstNumber = parseFloat(inputDisplay.value);
             currentOperator = operator;
             inputDisplay.value = "";
         } else {
             secondNumber = parseFloat(inputDisplay.value);
+
             switch (currentOperator) {
                 case '/':
                     if (secondNumber === 0){
@@ -127,7 +115,12 @@ function handleOperator (operator){
                     firstNumber = result;
                     secondNumber = null;
                     break;
+                default:
+                    inputDisplay.value = "Error!";
+                    break;
             }
+            firstNumber = result;
+            secondNumber = null;
             currentOperator = null;
         }
     }
@@ -155,7 +148,7 @@ subtractButton.addEventListener("click", function(){
 // Equal button
 const equalButton =  document.getElementById("equal-btn");
 equalButton.addEventListener("click", function(){
-    if(isPoweredOn && firstNumber !== "" && currentOperator !== ""){
+    if(isPoweredOn && firstNumber !== null && currentOperator !== null){
         secondNumber = parseFloat(inputDisplay.value);
         handleOperator(currentOperator);
 
@@ -163,8 +156,8 @@ equalButton.addEventListener("click", function(){
         inputDisplay.value = "";
 
         // Updating firsst number
-        firstNumber = "";
-        currentOperator = "";
+        firstNumber = null;
+        currentOperator = null;
 
         console.log("equal button clicked");
     } else {
@@ -176,7 +169,12 @@ const numberButtons = document.querySelectorAll(".num-btn");
 
 numberButtons.forEach(button => {
         button.addEventListener("click", function(){
-        inputDisplay.value = button.value;
-        console.log("button clicked:", button.value);
+            if(inputDisplay.value === "0" || inputDisplay.value === "") {
+                inputDisplay.value = button.value;
+            } else {
+                inputDisplay.value += button.value;
+            }
+            console.log("Button clicked:", button.value);
     })
 });
+
