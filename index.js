@@ -7,7 +7,7 @@ let isPoweredOn = false;    // Track power status
 let firstNumber = null;     // Stores the first number
 let secondNumber = null;    // Stores the second number
 let currentOperator = null; // Stores current operator
-let currentInput = "";      // Stores the current number input
+let currentInput = ""    // Stores the current number input
 let result = 0;
 
 const powerButton = document.getElementsByClassName("power-btn")[0];
@@ -44,14 +44,16 @@ deleteButton.addEventListener("click", function() {
 function clearButton(){
     currentInput = "";
     result = 0;
-    inputDisplay.value = 0;
+    inputDisplay.value = "0";
 }
+
 // Percent Button
 const percentButton = document.getElementsByClassName("percentage")[0];
 percentButton.addEventListener("click", function() {
     if (isPoweredOn && inputDisplay.value) {
         let currentValue = parseFloat(inputDisplay.value);
-        inputDisplay.value = currentValue / 100;
+        inputDisplay.value = (currentValue / 100).toString();
+        result = currentValue / 100;
     }
     console.log("Percent button clicked.");
 });
@@ -62,16 +64,23 @@ function handleOperator(operator) {
         if (firstNumber === null) {
             firstNumber = parseFloat(inputDisplay.value);
             currentOperator = operator;
-        } else if (currentOperator) {
+            inputDisplay.value = "";
+        } else if (currentOperator && secondNumber !== null) {
             secondNumber = parseFloat(inputDisplay.value);
             performCalculation();
             currentOperator = operator; // Update operator for next calculation
+            firstNumber = result;
+            secondNumber = null;
+            inputDisplay.value = result;
+        } else {
+            currentOperator = operator;
         }
     }
 }
 
 // Function to perform calculation
 function performCalculation() {
+    result = 0;
     if (firstNumber !== null && secondNumber !== null && currentOperator) {
         switch (currentOperator) {
             case '/':
@@ -134,7 +143,7 @@ equalButton.addEventListener("click", function() {
         performCalculation();
 
         // Clear values after calculations
-        firstNumber = null;
+        firstNumber = result;
         secondNumber = null;
         currentOperator = null;
 
