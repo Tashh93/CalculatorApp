@@ -43,6 +43,9 @@ deleteButton.addEventListener("click", function() {
 // Clear everything (C) button
 function clearButton(){
     currentInput = "";
+    firstNumber = null;
+    secondNumber = null;
+    currentOperator = null;
     result = 0;
     inputDisplay.value = "0";
 }
@@ -63,17 +66,14 @@ function handleOperator(operator) {
     if (isPoweredOn) {
         if (firstNumber === null) {
             firstNumber = parseFloat(inputDisplay.value);
-            currentOperator = operator;
-            inputDisplay.value = "";
         } else if (currentOperator && secondNumber !== null) {
             secondNumber = parseFloat(inputDisplay.value);
             performCalculation();
             currentOperator = operator; // Update operator for next calculation
             firstNumber = result;
-            secondNumber = null;
-            inputDisplay.value = result;
         } else {
             currentOperator = operator;
+            inputDisplay.value = "";
         }
     }
 }
@@ -85,9 +85,14 @@ function performCalculation() {
         switch (currentOperator) {
             case '/':
                 if (secondNumber === 0) {
-                    inputDisplay.value = "Error: Division by zero.";
+                    inputDisplay.value = "Error";
+                    firstNumber = null;
+                    secondNumber = null;
+                    currentOperator = null;
+                    return;
                 } else {
                     result = firstNumber / secondNumber;
+                    break;
                 }
                 break;
             case '+':
